@@ -1,0 +1,17 @@
+#!/bin/bash
+# load   Inserts a disk in the drive
+
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+if [ "$CURRENT_BRANCH" != none ]; then
+  echo "there is already a disk in the drive."
+  echo "eject it first."
+  exit 1
+fi
+
+sleep 1.5
+
+git checkout "$1" >/dev/null 2>&1 || {
+  echo "disk '$1' does not exist"
+  exit 1
+}

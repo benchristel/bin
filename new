@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# new    Creates a blank disk with the given name
+
+copy empty "$1"

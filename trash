@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# trash  Deletes a disk.
+
+TO_DELETE="$1"
+TO_RECOVER="$(git rev-parse "$TO_DELETE")"
+CURRENT_COMMIT="$(git rev-parse HEAD)"
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+
+if [ "$CURRENT_BRANCH" = "$TO_DELETE" ]; then
+  echo "cannot trash a disk that is in the drive"
+  exit 1
+fi
+
+if [ "$TO_DELETE" = empty -o "$TO_DELETE" = none ]; then
+  echo "cannot trash '$TO_DELETE' since that would break things"
+  exit 1
+fi
+
+git branch -D "$TO_DELETE" >/dev/null
+
+echo "Done. To get it back, run:"
+echo "recover $TO_RECOVER $TO_DELETE"

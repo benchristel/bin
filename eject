@@ -1,0 +1,13 @@
+#!/bin/bash
+# eject  Removes the disk from the drive
+status=$(git status --porcelain)
+if [ -n "$status" ]; then
+  git add .
+  git commit -m "$(date +%Y-%m-%d)" || {
+    echo "failed to save files."
+    exit 1
+  }
+fi
+git checkout none >/dev/null 2>&1
+sleep 1
+echo DONE
