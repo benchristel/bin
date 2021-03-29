@@ -1,6 +1,6 @@
 # bin
 
-Programs for interacting with [drive a](./a).
+Programs for interacting with [drive a](https://github.com/benchristel/a).
 
 These assume they're in a directory that's on your PATH.
 
