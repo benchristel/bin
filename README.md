@@ -1,4 +1,5 @@
-# bin
+bin
+===
 
 Programs for interacting with [drive a](https://github.com/benchristel/a).
 

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+START="${1:-1}"
+
+imgcat album-small.*
+cat metadata.txt
+echo
+
+ls *.{mp3,m4a} 2>/dev/null | tail +"$START" | (
+  while read filename; do
+    echo "$filename"
+    afplay "$filename"
+  done
+)

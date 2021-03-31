@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SRC="$1"
+DEST="$2"
+
+git rev-parse "$SRC" >/dev/null 2>&1 || {
+  echo "'$SRC' does not exist"
+  exit 1
+}
+git rev-parse "$DEST" >/dev/null 2>&1 && {
+  echo "'$DEST' already exists"
+  exit 1
+}
+
+git branch -M "$SRC" "$DEST"

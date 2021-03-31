@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DIR="$1"
+
+mkdir "$DIR" && \
+cd "$DIR" && \
+git init && \
+git commit -m "Initial commit" --allow-empty && \
+git branch -M empty && \
+git checkout -b none && \
+echo "# $DIR" > README.md && \
+git add . && \
+git commit -m "Add README.md" || echo "ERROR"
