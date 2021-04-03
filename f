@@ -1,5 +1,5 @@
 #!/bin/bash
 # f      Lists files on disk
-ls
+ls | cat
 
 echo "$(ls | wc -l | tr -d ' ') FILES"

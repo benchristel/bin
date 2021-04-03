@@ -2,8 +2,8 @@
 
 START="${1:-1}"
 
-imgcat album-small.*
-cat metadata.txt
+imgcat album-small.* 2>/dev/null
+cat metadata.txt 2>/dev/null
 echo
 
 ls *.{mp3,m4a} 2>/dev/null | tail +"$START" | (
