@@ -18,7 +18,7 @@ in a bare-bones container for some reason.
 
 ## Installation
 
-Symlink the `.bash_profile`, `prompt.sh`, and `.gitconfig` commands into your home directory. E.g:
+Symlink the `.bash_profile`, `prompt.sh`, and `.gitconfig` files into your home directory. E.g:
 
 ```
 # back up your current .bash_profile and .gitconfig:
