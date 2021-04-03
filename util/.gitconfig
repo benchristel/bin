@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Ben Christel
+	email = bchristel@pivotal.io
+[push]
+	default = simple
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/Ben/.gitignore_global
+[alias]
+	co = checkout
+	st = status
+	llog = log --date=local
+	flog = log --pretty=fuller --decorate
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lol = log --graph --decorate --oneline
+	lola = log --graph --decorate --oneline --all
+	blog = log origin/master... --left-right
+	rum = rebase master@{u}
