@@ -9,6 +9,16 @@ source prompt.sh
 # General Abbreviations
 alias ll='ls -laG'
 
+# del is safer rm. It moves files to tmp/.
+# It appends timestamps to prevent collisions if other
+# files with the same name are del'ed later.
+function del {
+  while [ -n "$1" ]; do
+    mv "$1" "/tmp/$1-$(date +%H.%M.%S)"
+    shift
+  done
+}
+
 # Git
 # See also: .gitconfig
 alias g='git'
