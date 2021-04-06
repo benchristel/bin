@@ -55,7 +55,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/bin:$PATH"
 
+CLEAR_SCREEN=on
 function before_command() {
+  [ "$CLEAR_SCREEN" = on ] || return
   case "$BASH_COMMAND" in
   $PROMPT_COMMAND)
     ;;
@@ -66,6 +68,10 @@ function before_command() {
     # recreate it
     echo "$(tput setaf 5)> $BASH_COMMAND$(tput sgr0)"
   esac
+}
+
+function cl() {
+  CLEAR_SCREEN="$1"
 }
 
 trap before_command DEBUG
