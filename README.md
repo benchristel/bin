@@ -15,20 +15,26 @@ in a bare-bones container for some reason.
 - `grep`
 - `less`
 - `column`
+- `sed`
+- `wc`
 
 ## Installation
 
-Symlink the `.bash_profile`, `prompt.sh`, and `.gitconfig` files into your home directory. E.g:
+Symlink the config files into your home directory. E.g:
 
 ```
-# back up your current .bash_profile and .gitconfig:
-cp .bash_profile{,.bak}
-cp .gitconfig{,.bak}
+# back up your current config files
+cp ~/.bash_profile{,.bak}
+cp ~/.gitconfig{,.bak}
+cp ~/.vim{,.bak}
+cp ~/.vimrc{,.bak}
 
 # then, assuming you've cloned bin to your home directory...
-ln -sf bin/util/.bash_profile .bash_profile
-ln -sf bin/util/prompt.sh prompt.sh
-ln -sf bin/util/.gitconfig .gitconfig
+ln -sf bin/util/.bash_profile ~/.bash_profile
+ln -sf bin/util/prompt.sh ~/prompt.sh
+ln -sf bin/util/.gitconfig ~/.gitconfig
+ln -sf bin/util/.vim ~/.vim
+ln -sf bin/util/.vimrc ~/.vimrc
 ```
 
 Here's what the shell prompt looks like:
