@@ -14,7 +14,7 @@ alias ll='ls -laG'
 # files with the same name are del'ed later.
 function del {
   while [ -n "$1" ]; do
-    mv "$1" "/tmp/$1-$(date +%H.%M.%S)"
+    mv "$1" "/tmp/$(basename "$1")-$(date +%H.%M.%S)"
     shift
   done
 }
