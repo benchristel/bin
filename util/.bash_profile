@@ -55,6 +55,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/bin:$PATH"
 
+# salt for login
+export SALT=ab3eff81644c955ff5c37f56924aba22752c10ad3782b9c0c2330181c7173ef68ddde1106c52a7fde922c78e2ad35d344b44057e058757fc2782cd0af29efa6c
+
 CLEAR_SCREEN=on
 function before_command() {
   [ "$CLEAR_SCREEN" = on ] || return
