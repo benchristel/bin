@@ -22,6 +22,7 @@ function del {
 # Git
 # See also: .gitconfig
 alias g='git'
+alias gs='git status'
 
 # Journaling
 alias day="vim ~/days/\$(date +%Y-%m-%d)"
