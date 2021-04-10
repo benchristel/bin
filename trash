@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#doc: trash  Deletes a disk.
+#doc: trash  Discards a disk (but you can get it back)
 
 TO_DELETE="$1"
 TO_RECOVER="$(git rev-parse "$TO_DELETE")"
