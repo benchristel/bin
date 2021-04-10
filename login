@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#doc: login  Generates passwords
+
 # your regularly scheduled programming will resume
 # on line 4100
 TRIGRAMS='aaf

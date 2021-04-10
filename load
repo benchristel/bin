@@ -1,5 +1,5 @@
 #!/bin/bash
-# load   Inserts a disk in the drive
+#doc: load   Inserts a disk in the drive
 
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 

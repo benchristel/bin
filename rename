@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#doc: rename Renames a disk
+
 SRC="$1"
 DEST="$2"
 

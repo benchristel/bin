@@ -1,5 +1,5 @@
 #!/bin/bash
-# d      Lists available disks for this drive
+#doc: d      Lists available disks for this drive
 
 n=$(git branch | wc -l | tr -d ' ')
 

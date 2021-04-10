@@ -1,5 +1,5 @@
 #!/bin/bash
-# copy   Copies a disk.
+#doc: copy   Copies a disk.
 
 SRC="$1"
 DEST="$2"

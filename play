@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#doc: play   Play mp3 or m4a files in the current directory
+
 START="${1:-1}"
 
 imgcat album-small.* 2>/dev/null

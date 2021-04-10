@@ -1,5 +1,5 @@
 #!/bin/bash
-# eject  Removes the disk from the drive
+#doc: eject  Removes the disk from the drive
 status=$(git status --porcelain)
 if [ -n "$status" ]; then
   git add .
