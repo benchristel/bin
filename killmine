@@ -1,0 +1,1 @@
+ps aux | grep -i [m]inecraft | awk '{print $2}' | xargs kill
