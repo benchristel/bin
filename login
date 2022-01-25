@@ -4171,6 +4171,11 @@ SHA=$(
   shasum -a 512 <<<"${MASTER_PASSWORD}${SALT}${SITE_NAME}"
 )
 
+COPY_COMMAND=pbcopy
+if command -v xclip >/dev/null; then
+  COPY_COMMAND="xclip -selection clipboard"
+fi
+
 (
   echo -n $(capitalize $(trigram $(decimal ${SHA:0:3})))
   echo -n $(trigram $(decimal ${SHA:3:3}))
@@ -4184,6 +4189,6 @@ SHA=$(
   echo -n $(trigram $(decimal ${SHA:21:3}))
   echo -n $(trigram $(decimal ${SHA:24:3}))
   echo -n $((16#${SHA:25:1}))
-) | pbcopy
+) | ${COPY_COMMAND}
 
 echo "Your password has been copied to the clipboard!"
