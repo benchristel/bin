@@ -4192,3 +4192,6 @@ fi
 ) | ${COPY_COMMAND}
 
 echo "Your password has been copied to the clipboard!"
+echo "Press ENTER to clear it."
+read
+${COPY_COMMAND} <<<""
